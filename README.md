@@ -63,13 +63,13 @@ Because we use a **DNS Label**, you never need to check the IP address.
 2. Add the following entry:
 
 ```text
-Host azure-dev
+Host ubuntu-remote-dev
     HostName ubuntu-dev-workstation.northeurope.cloudapp.azure.com
     User gabrielpedepera
     IdentityFile ~/.ssh/your-key-pair.pem
 ```
 
-3. **In VS Code:** Press `Cmd + Shift + P`, select **Remote-SSH: Connect to Host...**, and choose `azure-dev`.
+3. **In VS Code:** Press `Cmd + Shift + P`, select **Remote-SSH: Connect to Host...**, and choose `ubuntu-remote-dev`.
 
 ---
 
@@ -81,7 +81,7 @@ Once the infrastructure is deployed and your SSH config is in place, this is all
    ```bash
    az vm start -g rg-remote-development -n ubuntu-remote-dev
    ```
-2. **Connect from VS Code:** Press `Cmd + Shift + P` → **Remote-SSH: Connect to Host...** → select `azure-dev`.
+2. **Connect from VS Code:** Press `Cmd + Shift + P` → **Remote-SSH: Connect to Host...** → select `ubuntu-remote-dev`.
 
 > The VM auto-stops at 19:00 UTC daily, so no manual shutdown is needed.
 
