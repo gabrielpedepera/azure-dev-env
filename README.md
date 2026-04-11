@@ -25,7 +25,7 @@ brew update && brew install azure-cli
 Using your existing `.pem` key pair, extract the public "lock" string for Azure:
 
 ```bash
-# Set strict permissions (Required by macOS)
+# Set strict permissions (required by SSH)
 chmod 400 ~/.ssh/your-key-pair.pem
 
 # Extract the Public Key string for the deployment command
