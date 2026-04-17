@@ -30,7 +30,7 @@ RUN mkdir -p "$HOME/.config/chezmoi" \
     > "$HOME/.config/chezmoi/chezmoi.toml"
 
 # Apply dotfiles (mirrors runcmd)
-RUN chezmoi init --apply gabrielpedepera/dotfiles
+RUN chezmoi init --apply --exclude=encrypted gabrielpedepera/dotfiles
 
 # Smoke tests: verify all expected tools
 ENV PATH="/home/gabrielpedepera/.local/bin:/home/gabrielpedepera/.atuin/bin:${PATH}"

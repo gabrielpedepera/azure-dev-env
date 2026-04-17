@@ -120,7 +120,7 @@ runcmd:
   # Install chezmoi and apply dotfiles as the user
   - su - gabrielpedepera -c 'sh -c "$(curl -fsLS get.chezmoi.io)" -- -b "$HOME/.local/bin"'
   - su - gabrielpedepera -c 'mkdir -p "$HOME/.config/chezmoi" && printf "[data]\n    name = \"Gabriel Pereira\"\n    email = \"gabrielpedepera@gmail.com\"\n" > "$HOME/.config/chezmoi/chezmoi.toml"'
-  - su - gabrielpedepera -c 'export PATH="$HOME/.local/bin:$PATH" && chezmoi init --apply gabrielpedepera/dotfiles'
+  - su - gabrielpedepera -c 'export PATH="$HOME/.local/bin:$PATH" && chezmoi init --apply --exclude=encrypted gabrielpedepera/dotfiles'
 ''')
     }
     networkProfile: {
