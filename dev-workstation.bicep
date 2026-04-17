@@ -116,6 +116,7 @@ runcmd:
   - echo '/swapfile none swap sw 0 0' >> /etc/fstab
   - curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && apt-get install -y nodejs
   - chsh -s /usr/bin/zsh gabrielpedepera
+  - su - gabrielpedepera -c 'mkdir -p "$HOME/Workspace"'
   # Install chezmoi and apply dotfiles as the user
   - su - gabrielpedepera -c 'sh -c "$(curl -fsLS get.chezmoi.io)" -- -b "$HOME/.local/bin"'
   - su - gabrielpedepera -c 'mkdir -p "$HOME/.config/chezmoi" && printf "[data]\n    name = \"Gabriel Pereira\"\n    email = \"gabrielpedepera@gmail.com\"\n" > "$HOME/.config/chezmoi/chezmoi.toml"'
